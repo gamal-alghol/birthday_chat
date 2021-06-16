@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.fadfadah.app.activity.Preview_Video_A"
+
+    >
+
+
+<com.fadfadah.app.Video_Recording.MovieWrapperView
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:layout_centerInParent="true"
+    android:id="@+id/layout_movie_wrapper"/>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/progress_prev"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/Goback"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Next"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/next_btn"
+        android:layout_above="@+id/recylerview"
+        android:textColor="@color/white"
+        android:background="@drawable/background_next"
+        android:layout_alignParentRight="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recylerview"
+        android:paddingBottom="20dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

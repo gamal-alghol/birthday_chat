@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mess_profileImage"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:src="@drawable/profile_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showMessage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mess_img"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:scaleType="centerCrop"
+        android:transitionName="transition"
+        app:layout_constraintBottom_toTopOf="@id/showMessage"
+        app:layout_constraintDimensionRatio="H,3:2"
+        app:layout_constraintLeft_toRightOf="@+id/mess_profileImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/mess_profileImage"
+        android:autoLink="all"
+        android:background="@drawable/background_left"
+        android:maxWidth="@dimen/_240sdp"
+        android:paddingStart="12dp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:text="gamal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/view"
+        app:layout_constraintLeft_toRightOf="@+id/mess_profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/mess_img"
+        app:layout_constraintVertical_bias=".2" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_left"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/showMessage"
+        app:layout_constraintTop_toTopOf="@+id/showMessage">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:id="@+id/progress"
+                android:visibility="invisible"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:id="@+id/play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_play_arrow_24" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_seek"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/linearlayout"
+        app:layout_constraintRight_toRightOf="@+id/linearlayout"
+        app:layout_constraintLeft_toLeftOf="@id/linearlayout"
+        app:layout_constraintTop_toTopOf="@+id/linearlayout" />
+
+    <ImageView
+        android:id="@+id/iv_mess_status"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/showMessage"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

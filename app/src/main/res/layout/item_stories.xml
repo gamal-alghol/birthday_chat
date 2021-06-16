@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/civ_my_status"
+        app:layout_constraintStart_toEndOf="@+id/civ_my_status"
+        app:layout_constraintTop_toTopOf="@+id/civ_my_status" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_username"
+        tools:layout_editor_absoluteX="405dp" />
+
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_like"
+  android:gravity="center_vertical"
+    android:layout_marginRight="16dp"
+        android:drawablePadding="8dp"
+        android:text="@string/like"
+        android:textSize="16sp"
+
+        app:layout_constraintRight_toLeftOf="@+id/comment"
+
+        app:layout_constraintLeft_toRightOf="@+id/view"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:drawableLeft="@drawable/ic_comment"
+        android:drawablePadding="8dp"
+        android:gravity="left"
+        android:text="@string/comments"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
+        app:layout_constraintLeft_toRightOf="@+id/like"
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintTop_toTopOf="@+id/like"
+ />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/black300"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_liks" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:background=" #cbcdcd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment" />
+
+    <xyz.schwaab.avvylib.AvatarView
+        android:id="@+id/civ_my_status"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/profile_img"
+        app:avvy_border_color="@android:color/darker_gray"
+        app:avvy_border_highlight_color="#2196F3"
+        app:avvy_border_highlight_color_end="#3F51B5"
+        app:avvy_border_thickness="2dp"
+        app:avvy_border_thickness_highlight="3dp"
+        app:avvy_distance_to_border="5dp"
+        app:avvy_highlighted="true"
+        app:avvy_loading_arches="5"
+        app:avvy_loading_arches_degree_area="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/num_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="300 تعليق"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+       />
+
+    <TextView
+        android:id="@+id/num_liks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        tools:text="اهجاب 300"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/civ_my_status" />
+</androidx.constraintlayout.widget.ConstraintLayout>

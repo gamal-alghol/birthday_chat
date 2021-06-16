@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.AddPhoneOrEmailFragment">
+
+    <!--    <com.hbb20.CountryCodePicker-->
+    <!--        android:id="@+id/country_picker"-->
+    <!--        android:layout_width="@dimen/_70sdp"-->
+    <!--        android:layout_height="@dimen/_42sdp"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_marginTop="@dimen/_30sdp"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/add_email_input"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/add_phone_input"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="@dimen/_30sdp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textColorHint="@color/black"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/add_email_input"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/country_picker"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/add_phone_edt"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:drawablePadding="6dp"-->
+    <!--            android:hint="@string/what_is_your_mobile_phone_number"-->
+    <!--            android:inputType="number"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:padding="@dimen/_10sdp"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:textSize="@dimen/_12sdp" />-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/or"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_margin="@dimen/_10sdp"-->
+    <!--        android:layout_marginTop="@dimen/_20sdp"-->
+    <!--        android:fontFamily="@font/cairo_bold"-->
+    <!--        android:text="@string/or"-->
+    <!--        android:textColor="@color/red"-->
+    <!--        android:textSize="@dimen/_20sdp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+        android:src="@drawable/birhday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/yourname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/whats_your_name"
+        android:textColor="@color/black500"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_email_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourname"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_email_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawablePadding="6dp"
+            android:hint="@string/you_can_register_by_entering_your_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_password_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/add_email_input"
+        app:layout_constraintStart_toStartOf="@+id/add_email_input"
+        app:layout_constraintTop_toBottomOf="@id/add_email_input"
+        app:startIconDrawable="@drawable/ic_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_password_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawablePadding="6dp"
+            android:hint="@string/your_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+
+        android:background="@drawable/rounded_button_orange"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/sign_in"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_password_input"
+        app:layout_constraintVertical_bias="0.512" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:maxHeight="@dimen/_280sdp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp"
+    app:contentPadding="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_profile_img"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:src="@drawable/profile_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_active"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_margin="@dimen/_3sdp"
+            android:background="@drawable/dot_inactive"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_profile_img"
+            app:layout_constraintEnd_toEndOf="@+id/civ_profile_img" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_profile_img"
+            app:layout_constraintStart_toEndOf="@id/civ_profile_img"
+            app:layout_constraintTop_toTopOf="@id/civ_profile_img"
+            tools:text="محمد" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:textSize="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/civ_profile_img" />
+
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@id/civ_profile_img"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time"/>
+
+
+        <ImageView
+            android:id="@+id/iv_post"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_270sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            android:transitionName="transition"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/civ_profile_img" />
+
+        <FrameLayout
+            android:id="@+id/view_re_play"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="#A8272222"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_post"
+            app:layout_constraintEnd_toEndOf="@id/iv_post"
+            app:layout_constraintStart_toStartOf="@id/iv_post"
+            app:layout_constraintTop_toTopOf="@+id/iv_post">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_play_circle_filled_24" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_post_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:padding="@dimen/_3sdp"
+            android:textIsSelectable="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_post" />
+        <io.github.ponnamkarthik.richlinkpreview.RichLinkViewTelegram
+            android:id="@+id/richLinkView"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_post_content"
+            android:layout_height="wrap_content">
+        </io.github.ponnamkarthik.richlinkpreview.RichLinkViewTelegram>
+
+        <TextView
+            android:id="@+id/tv_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_comment_24"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/richLinkView"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/tv_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_favorite_fill_red_24"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_comments"
+            app:layout_constraintTop_toBottomOf="@+id/richLinkView"
+            tools:text="20" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

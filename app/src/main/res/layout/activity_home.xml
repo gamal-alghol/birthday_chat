@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_200sdp"
+            android:orientation="vertical">
+<!--
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_home_run"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/menu_home" />
+-->
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/profile" />
+
+            <TextView
+                android:id="@+id/tv_settings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_baseline_settings_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/menu_settings" />
+
+            <TextView
+                android:id="@+id/tv_about_app"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_baseline_help_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/menu_about" />
+
+            <TextView
+                android:id="@+id/tv_rate_app"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_baseline_star_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/menu_rate" />
+
+            <TextView
+                android:id="@+id/tv_share_app"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_baseline_share_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/menu_share" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:drawableStart="@drawable/ic_power_off"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="@string/menu_logout"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

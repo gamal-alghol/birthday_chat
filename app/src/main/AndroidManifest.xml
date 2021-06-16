@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fadfadah.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name=".permission.C2D_MESSAGE"
+        tools:replace="android:name" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl">
+        <activity android:name=".activity.SplashActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.PostDetailActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".activity.AddNewPostActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:exported="true" />
+        <activity
+            android:name=".fragment.SmsConfrimFragment"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:exported="true"
+            android:label="@string/reset_password" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:theme="@style/ChatTheme">
+            <intent-filter>
+                <action android:name="CHAT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AddFriendActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:exported="true"
+            android:theme="@style/AppThemeTransparent" >
+            <intent-filter>
+                <action android:name="FRIEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Preview_Video_A"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.StoryDetailActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:configChanges="orientation|locale|keyboard|fontScale|density|colorMode|layoutDirection|keyboardHidden"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="NOTIFICATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.UploadStatusServices"
+            android:enabled="true" />
+        <service
+            android:name=".services.UploadPostServices"
+            android:enabled="true" />
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/profile_img" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="default_notification_channel_id" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+    </application>
+
+</manifest>

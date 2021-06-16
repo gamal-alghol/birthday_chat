@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/bottom_sheet"
+        android:layout_height="@dimen/_500sdp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_dodgeInsetEdges="bottom"
+            tools:listitem="@layout/item_comments"
+            android:layout_marginBottom="4dp"
+            />
+        <EditText
+            android:id="@+id/edit_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:background="@drawable/top_round_blue"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/write_a_comment"
+            android:inputType="text"
+            android:maxLines="1"
+            android:focusedByDefault="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/send_comment_img"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/send_comment_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_comment"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_comment"
+
+            app:srcCompat="@drawable/ic_send_message" />
+
+    <ProgressBar
+        android:id="@+id/load_Comments_Bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/comments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/comments" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

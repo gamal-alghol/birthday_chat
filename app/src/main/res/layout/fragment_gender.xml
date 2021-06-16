@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingTop="@dimen/_10sdp"
+    tools:context=".fragment.GenderFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/birhday" />
+
+    <TextView
+        android:id="@+id/yourgender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/whats_your_gender"
+        android:textColor="@color/black500"
+        android:textSize="@dimen/_16sdp" />
+
+    <RadioGroup
+        android:id="@+id/groupbuton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourgender"
+        android:layout_margin="@dimen/_10sdp">
+
+        <RadioButton
+            android:id="@+id/male_rdioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/cairo_semibold"
+            android:text="@string/male"
+            android:textColor="@color/black300"
+            android:textSize="@dimen/_16sdp" />
+
+        <RadioButton
+            android:id="@+id/female_rdioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_semibold"
+            android:text="@string/female"
+            android:textColor="@color/black300"
+            android:textSize="@dimen/_16sdp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupbuton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button_orange"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

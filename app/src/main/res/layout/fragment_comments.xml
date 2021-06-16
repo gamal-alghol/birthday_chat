@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragment.CommentsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/top_round_white"
+        android:paddingTop="@dimen/_10sdp">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_comments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_likes"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_comment_24"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/tv_likes"
+            app:layout_constraintStart_toEndOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20" />
+
+
+        <TextView
+            android:id="@+id/tv_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_favorite_fill_red_24"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/tv_comments"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#EEEEEE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_comments" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_comments"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/frame_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_comments" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/frame_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:background="@drawable/top_round_blue"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                android:id="@+id/edt_comment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="@string/write_a_comment"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/white" />
+            <ImageView
+                android:id="@+id/iv_send"
+                android:src="@drawable/ic_send_message"
+                android:layout_width="@dimen/_35sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

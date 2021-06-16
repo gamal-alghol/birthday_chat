@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChatActivity">
+
+    <EditText
+        android:id="@+id/edittext_chatbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/top_round_blue"
+        android:fontFamily="@font/cairo_semibold"
+        android:hint="@string/type_here"
+        android:maxHeight="@dimen/_65sdp"
+        android:minHeight="@dimen/_42sdp"
+        android:paddingStart="8dp"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black300"
+        app:layout_constraintBottom_toBottomOf="@+id/record_img"
+        app:layout_constraintRight_toLeftOf="@+id/record_img"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintLeft_toRightOf="@+id/add_photo"
+        app:layout_constraintTop_toTopOf="@+id/record_img"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/add_photo"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_baseline_add_photo_alternate_24"
+        app:layout_constraintBottom_toBottomOf="@+id/edittext_chatbox"
+        app:layout_constraintLeft_toLeftOf="@+id/frame_chat"
+        app:layout_constraintTop_toBottomOf="@+id/reyclerview_message_list"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/image_thumb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/md_grey_300"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:translationY="@dimen/_600sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/send_img"
+        android:layout_width="27dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/ic_send_message"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/edittext_chatbox"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edittext_chatbox" />
+
+    <ImageView
+        android:id="@+id/record_img"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/ic_baseline_mic_24"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_8sdp"
+        android:visibility="visible"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="@+id/send_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/frame_chat" />
+
+
+    <LinearLayout
+        android:id="@+id/frame_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/md_grey_100"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edittext_chatbox"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reyclerview_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/md_grey_100"
+        app:layout_constraintBottom_toTopOf="@+id/edittext_chatbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        tools:listitem="@layout/chat_item_right" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

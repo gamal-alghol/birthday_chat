@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871527485336",
+    "firebase_url": "https://fadfadah-27a67.firebaseio.com",
+    "project_id": "fadfadah-27a67",
+    "storage_bucket": "fadfadah-27a67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871527485336:android:9f11a65dd70637c5c325ed",
+        "android_client_info": {
+          "package_name": "com.fadfadah.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871527485336-1tia2fiatlns1sslm96hdt56rviaq35b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaDYJLYhIzH3KL0ekQfWcS6NM3oMBwZ_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871527485336-1tia2fiatlns1sslm96hdt56rviaq35b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

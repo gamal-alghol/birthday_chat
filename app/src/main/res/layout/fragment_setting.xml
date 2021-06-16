@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.SettingFragment">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:text="@string/setting"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16sdp" />
+
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_baseline_arrow_white_24" />
+
+    <RelativeLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/language"
+            android:textSize="@dimen/_16sdp" />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rounded_bk_with_blue_border">
+
+            <Spinner
+                android:id="@+id/language_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/_6sdp"
+                android:entries="@array/langageitems"
+                android:fontFamily="@font/cairo_semibold"
+                android:gravity="center_horizontal"
+                android:spinnerMode="dropdown"
+                android:textDirection="rtl"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/who_can_see_your_posts"
+        android:textSize="@dimen/_17sdp" />
+
+    <RadioGroup
+        android:id="@+id/groupbuton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_margin="@dimen/_10sdp">
+
+        <RadioButton
+            android:id="@+id/friend_rdioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_semibold"
+            android:text="@string/friends"
+            android:textColor="@color/black300"
+            android:textSize="@dimen/_16sdp" />
+
+        <RadioButton
+            android:id="@+id/public_rdioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_semibold"
+            android:text="@string/publicc"
+            android:textColor="@color/black300"
+            android:textSize="@dimen/_16sdp" />
+    </RadioGroup>
+
+</RelativeLayout>
